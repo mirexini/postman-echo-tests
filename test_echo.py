@@ -23,7 +23,7 @@ def test_get_with_query_params():
         timeout=TIMEOUT,
     )
 
-    assert response.status_code == 500
+    assert response.status_code == 200
     data = response.json()
     assert data["args"] == params
     assert "url" in data
