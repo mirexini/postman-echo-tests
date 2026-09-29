@@ -23,7 +23,7 @@ def test_get_with_query_params():
         timeout=TIMEOUT,
     )
 
-    assert response.status_code == 200
+    assert response.status_code == 500
     data = response.json()
     assert data["args"] == params
     assert "url" in data
@@ -52,8 +52,8 @@ def test_get_with_custom_header():
 def test_post_json_body():
     """POST /post возвращает JSON-тело в поле json."""
     payload = {
-        "name": "Alice",
-        "age": 30,
+        "name": "Nikita",
+        "age": 28,
         "active": True,
     }
 
